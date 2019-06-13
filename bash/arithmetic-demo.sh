@@ -13,11 +13,18 @@ read -p "second Number? " secondnum
 #firstnum=5
 #secondnum=2
 sum=$((firstnum + secondnum))
+sub=$((firstnum - secondnum))
 dividend=$((firstnum / secondnum))
+multiplication=$((firstnum * secondnum))
+remainder=$((firstnum % secondnum))
+power=$((firstnum**secondnum))
 fpdividend=$(awk "BEGIN{printf \"%.2f\", $firstnum/$secondnum}")
 
 cat <<EOF
 $firstnum plus $secondnum is $sum
-$firstnum divided by $secondnum is $dividend
+$firstnum divided by $secondnum gives $dividend with a remainder of $remainder
   - More precisely, it is $fpdividend
+$firstnum multiply by $secondnum is $multiplication
+$firstnum subtracting by $secondnum is $sub
+Displaying the $firstnum raised to the proof of the $secondnum is $power
 EOF
