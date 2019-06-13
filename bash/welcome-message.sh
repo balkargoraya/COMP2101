@@ -12,16 +12,15 @@
 ###############
 # Variables   #
 ##############
-name="$USER"
-date=$(date +'%I:%M %p')
+title="overload"
 hostname=$(hostname)
+date=$(date +'%I:%M %p')
 weekday=$(date +%u)
 ###############
 # Main        #
 ###############
-cat <<EOF
-Welcome to planet $hostname, $name!
-EOF
+#cat <<EOF
+cowsay "Welcome to planet $hostname, "$title $USER!""
 if [ "$weekday" = "6" ] || [ "$weekday" = "7" ]
 then
  echo "It is $date on weekend."
