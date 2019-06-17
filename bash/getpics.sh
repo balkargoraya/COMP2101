@@ -17,7 +17,7 @@ test -f ~/Pictures/pics.zip || wget -q -o ~/Pictures/pics.zip http://zonzorp.net
 # unpack the downloaded zipfile if it is there, then delete the local copy of the zipfile
 test -f ~/Pictures/pics.zip && unzip -d ~/Pictures -o -q ~/Pictures/pics.zip && rm ~/Pictures/pics.zip
 
-test -f ~/Pictures/pics.tgz || wget -q -o ~/Pictures/pics.tgz http://zonzorp.net/pics.zip
+test -f ~/Pictures/pics.tgz || wget -q -o ~/Pictures/pics.tgz http://zonzorp.net/pics.tgz
 test -f ~/Pictures/pics.tgz && tar -c ~/Pictures -xzf ~/Pictures/pics.tgz || rm ~/Pictures/pics.tgz
 # Make a report on what we have in the Pictures directory
 #test -d ~/Pictures
